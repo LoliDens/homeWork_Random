@@ -14,19 +14,15 @@ namespace homeWork_Random
             int lowerLimitRandom = 0;
             int upperLimitRandom = 101;
             int number = random.Next(lowerLimitRandom, upperLimitRandom);
-            int sumNumbers = number;
+            int sumNumbers = 0;
             int firstDivider = 3;
             int secondDivider = 5;
 
             Console.WriteLine("Рандомное число: " + number);
 
-            for (int i = 0; i < number; i++) 
+            for (int i = 0; i <= number; i++) 
             {
-                if ((i % firstDivider) == 0)
-                {
-                    sumNumbers += i;
-                }
-                else if ((i % secondDivider) == 0) 
+                if (((i % firstDivider) == 0) || ((i % secondDivider) == 0))
                 {
                     sumNumbers += i;
                 }
